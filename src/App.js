@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import { Body, Body2 } from './components/Body';
+import { Header } from './components/Header';
 import './App.css';
 
-function App() {
+export default function App() {
+  const add = (a, b) => a + b;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header
+        title={'Boas Francisco'}
+        num={5}
+        myFunc={add}
+        myArr={[10, 11, 12, 13]}
+      />
+      <Body mainText="Francisco" myFunc={add} />
+      <Body2 />
     </div>
   );
 }
-
-export default App;
