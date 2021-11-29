@@ -1,5 +1,6 @@
 import { Body, Body2 } from './components/Body';
 import { Header } from './components/Header';
+import { Counter } from './components/Counter';
 import './App.css';
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
       />
       <Body mainText="Francisco" myFunc={add} />
       <Body2 />
+      <Counter initialCount={100} />
     </div>
   );
 }
